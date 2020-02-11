@@ -1,0 +1,8 @@
+1/31/2020
+
+10am - 11am: 
+	- Cloned into git repository
+	- Setup game environment
+	- Test game launch
+	- Familiarized myself with project structure
+	- Attempted to push dev branch to github - Require Permission, Permission requested 1/31/20
