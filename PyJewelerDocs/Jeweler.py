@@ -1,45 +1,55 @@
-=head1 NAME
+#!/usr/bin/env python3
+# Jeweler.py
 
+"""
 Jeweler
 
-=head1 DESCRIPTION
+DESCRIPTION
 
 The Jeweler skill helper module.
 
-=cut
+"""
 
-package Jeweler;
+import sys, asyncio, json
 
-use common::sense;
+Class Jeweler:
 
-=over 4
+    # Global variable to store config data
+    self.CFG = ''
 
-=item @RESISTS
+    # Attempts to load JSON config file into self.CFG
+    async def load_config:
+        
+       print >> sys.stout, "loading jeweler config from $cf::DATADIR/jeweler\n"
 
-List of all resistancies that can occur on rings and amulets.
+       try:
+           
+           cfgFile = open("$cf::DATADIR/jeweler")
+           if cfgFile:
+               self.CFG = cf.decode_json(cfgFile)
+               await asyncio.sleep(0.001)
 
-=cut
+        except:
+            
+            print >> sys.stderr, "$cf::DATADIR/jeweler: $!"
+    
 
-our $CFG;
+    async def getcfg(sect, key):
+        
+        return $CFG->{$sect} unless defined $key
 
-sub load_config {
-   cf::trace "loading jeweler config from $cf::DATADIR/jeweler\n";
+        my $cfg = $CFG->{$sect}->{$key}
+            or die "Couldn't find $sect/$key in configuration!"
 
-   0 < Coro::AIO::aio_load "$cf::DATADIR/jeweler", my $data
-      or die "$cf::DATADIR/jeweler: $!";
+        $cfg
 
-   $CFG = cf::decode_json $data;
-}
 
-sub getcfg {
-   my ($sect, $key) = @_;
-   return $CFG->{$sect} unless defined $key;
+    """
+    @RESISTS
 
-   my $cfg = $CFG->{$sect}->{$key}
-      or die "Couldn't find $sect/$key in configuration!";
+    List of all resistancies that can occur on rings and amulets.
 
-   $cfg
-}
+    """
 
 our @RESISTS = (
    cf::ATNR_PHYSICAL,

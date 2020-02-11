@@ -22,7 +22,7 @@ maxlevels:
    resist_level        : 45
 # the maximum level where max effect resistance can be made
    effect_resist_level : 30
-# the level where the maximum improvemnts can be made
+# the level where the maximum improvements can be made
    improve_level       : 90
 # the level where the maximum special improvements can be made
    spec_level          : 70

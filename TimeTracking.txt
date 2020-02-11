@@ -1,8 +1,30 @@
 1/31/2020
 
-10am - 11am: 
+10am - 12pm: 
 	- Cloned into git repository
 	- Setup game environment
 	- Test game launch
 	- Familiarized myself with project structure
 	- Attempted to push dev branch to github - Require Permission, Permission requested 1/31/20
+	- github permission denied - work locally
+
+2/10/2020
+
+6:30pm - 7:00pm:
+	- Initiated new git repository to hold translated script at https://github.com/BenjaminWassermann/PyJeweler
+
+7:00pm - 7:30pm:
+	- Removed PERL-style markup from Jeweler Concept
+	- Adjusted indentation to make sections clear without markup
+	- Updated update date
+	- Added "Modified by Benjamin Wassermann" to the author section
+
+7:30pm - 8:30pm:
+	- Saved PERL scripts as-is as Python scripts
+	- Translating load_config
+		- all methods must use async IO
+		- where is event loop?
+		- where are cf methods implemented? datadir?
+
+8:30pm - 9:00pm:
+	-Translating getcfg
